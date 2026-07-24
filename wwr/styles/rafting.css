@@ -1,36 +1,68 @@
+:root {
+    --primary-color: #055a05;
+    /* forest green */
+    --secondary-color: #f4a261;
+    /* warm sand */
+    --accent1-color: #264653;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: black;
 }
 
 header,
 main,
 footer {
-    width: 840px;
+    width: 100%;
+    max-width: 840px;
     margin: 0 auto;
 }
 
 h1,
 h2 {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-h2 {
-
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    opacity: 0.7;
-    background-color: blue;
+    font-family: var(--heading-font);
+    background-color: var(--primary-color);
     color: white;
 }
 
-nav,
+h2 {
+    width: auto;
+    margin: 16px 0;
+    padding: 16px;
+    opacity: 0.7;
+    background-color: var(--accent2-color);
+    color: white;
+}
+
+nav {
+    margin: 16px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
 p,
 section,
 article {
@@ -44,27 +76,46 @@ article {
 
 .hero {
     position: relative;
-    background-color: blue;
+    background-color: var(--accent1-color);
+    overflow: hidden;
+    padding: 0;
+}
+
+.hero article {
+    position: relative;
+    padding: 16px;
+    overflow: auto;
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 .hero img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .hero article img {
     float: right;
     width: 125px;
+    margin: 0 0 16px 16px;
 }
 
 h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
+    margin: 20px 0;
+    width: auto;
     padding: 16px;
     text-align: center;
     opacity: 0.7;
     background-color: blue;
     color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    background-color: var(--secondary-color);
 }
